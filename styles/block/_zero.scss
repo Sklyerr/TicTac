@@ -1,0 +1,45 @@
+@keyframes showZero {
+    from {
+        transform: scale(1.3);
+    }
+    to {
+        transform: scale(1);
+
+    }
+}
+
+.zero {
+    height: 9vw;
+    width: 9vw;
+    border-radius: 50%;
+    background-color: var(--color-blue);
+    position: relative;
+
+    @include mobile {
+        height: 14vw;
+        width: 14vw;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 1.25vw;
+        left: 1.25vw;
+        bottom: 1.25vw;
+        right: 1.25vw;
+        height: 6.5vw;
+        width: 6.5vw;
+        border-radius: 50%;
+        background-color: var(--color-white);
+        animation: showZero var(--transition-duration) ease forwards;
+
+        @include mobile {
+            height: 10vw;
+            width: 10vw;
+            top: 1.9vw;
+            left: 1.9vw;
+            bottom: 1.9vw;
+            right: 1.9vw;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="app/app.js" defer></script>
+</head>
+<body>
+    <header class="header container">
+        <h1 class="header__title">Tic <span>Tac</span></h1>
+        <nav class="menu header__menu">
+            <ul class="header__list">
+                <li class="header__item" id="restartGame">
+                    <a href="#" class="header__link">New game</a>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">Statistics</a>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="result">
+        <h1 class="result__title">Пример</h1>
+        <div class="result__buttons">
+            <button class="result__new-game button" id="buttonNew">New Game</button>
+            <button class="result__statistics button">Statistics</button>
+        </div>
+    </section>
+
+    <section class="board container">
+        <div class="board__box"><div class="board__empty" id="1"></div></div>
+        <div class="board__box"><div class="board__empty" id="2"></div></div>
+        <div class="board__box"><div class="board__empty" id="3"></div></div>
+        <div class="board__box"><div class="board__empty" id="4"></div></div>
+        <div class="board__box"><div class="board__empty" id="5"></div></div>
+        <div class="board__box"><div class="board__empty" id="6"></div></div>
+        <div class="board__box"><div class="board__empty" id="7"></div></div>
+        <div class="board__box"><div class="board__empty" id="8"></div></div>
+        <div class="board__box"><div class="board__empty" id="9"></div></div>
+    </section>
+</body>
+</html>
