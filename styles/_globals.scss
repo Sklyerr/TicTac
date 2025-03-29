@@ -1,0 +1,30 @@
+body {
+    @include fluid-text(24, 14);
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    background-color: var(--color-white);
+    color: var(--color-blue);
+    overflow-y: hidden;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration) !important;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    @include fluid-text(60, 30);
+    font-family: 'Rowdies-Bold';
+}
