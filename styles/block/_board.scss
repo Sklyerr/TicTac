@@ -1,0 +1,32 @@
+.board {
+    padding-top: 10px;
+    display: grid;
+    grid-template: repeat(3, 10vw) / repeat(3, 10vw);
+    justify-content: center;
+    gap: 1.5vw;
+
+    @include tablet {
+        padding-top: 35px;
+    }
+
+    @include mobile {
+        padding-top: 55px;
+        grid-template: repeat(3, 15vw) / repeat(3, 15vw);
+        gap: 2.5vw;
+    }
+    
+    &__box {
+        border: .3vw solid var(--color-blue);
+        border-radius: var(--border-radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__empty {
+        width: 100%;
+        height: 100%;
+    }
+}

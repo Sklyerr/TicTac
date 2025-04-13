@@ -1,0 +1,34 @@
+.difficulty {
+    position: relative;
+
+    &__dropdown-btn {
+        color: var(--color-blue);
+        background: inherit;
+        border: none;
+        cursor: pointer;
+        outline: none;
+
+        @include hover {
+            color: var(--color-red);
+        }
+    }
+    &__dropdown-content {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        border: .3vw solid var(--color-blue);
+        border-radius: 8px;
+        background-color: rgba($color: #FFF, $alpha: .9);
+        display: none;
+        z-index: 1;
+        transition-duration: var(--transition-duration);
+
+        & p {
+            @include hover {
+                color: var(--color-red);
+                cursor: pointer;
+            }
+        }
+
+    }
+}

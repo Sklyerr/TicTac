@@ -1,0 +1,46 @@
+.header {
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        color: var(--color-red);
+        margin: 0;
+        padding: 5px 0 0 0;
+
+        span {
+            color: var(--color-blue);
+        }
+
+        @include tablet {
+            padding: 15px 0 10px;
+        }
+
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        column-gap: 30px;
+        @include tablet {
+            column-gap: 10px;
+        }
+    }
+
+    &__link {
+
+        text-wrap: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include hover {
+            color: var(--color-red);
+        }
+    }
+
+}

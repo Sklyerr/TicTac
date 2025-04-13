@@ -1,0 +1,50 @@
+.cross {
+
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        top: 4vw;
+        left: -1vw;
+        width: 11.5vw;
+        height: 1.5vw;
+        background-color: var(--color-red);
+        border-radius: var(--border-radius);
+        animation: var(--transition-duration) show ease;
+
+        @include mobile {
+            top: 6.5vw;
+            left: -2vw;
+            width: 18.5vw;
+            height: 1.85vw;
+        }
+    }
+    &::after {
+        transform: rotate(45deg) scaleX(0);
+        animation: var(--transition-duration) showCrossAfter ease forwards;
+    }
+    &::before {
+        transform: rotate(-45deg) scaleX(0);
+        animation: var(--transition-duration) showCrossBefore ease forwards;
+        animation-delay: var(--transition-duration);
+    }
+
+    @keyframes showCrossAfter {
+        from {
+            transform: scaleX(0) rotate(45deg);
+            opacity: 1;
+        }
+        to{
+            transform: scaleX(1) rotate(45deg);
+            opacity: 1;
+        }
+    }
+    @keyframes showCrossBefore {
+        from {
+            transform: scaleX(0) rotate(-45deg);
+        }
+        to{
+            transform: scaleX(1) rotate(-45deg);
+        }
+    }
+}

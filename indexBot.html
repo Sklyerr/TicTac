@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <script src="app/bot.js" type="module" defer></script>
+    <script src="app/button.js" type="module" defer></script>
+    <script src="app/dropdown.js" type="module" defer></script>
+</head>
+<body>
+    <header class="header container">
+        <h1 class="header__title">Tic <span>Tac</span></h1>
+        <nav class="menu header__menu">
+            <ul class="header__list">
+                <li class="header__item" id="restartGameBot">
+                    <a href="#" class="header__link">New game</a>
+                </li>
+                <li class="header__item">
+                    <a href="#" class="header__link" id="resultBtn">Statistics</a>
+                </li>
+                <li class="header__item">
+                    <a href="./index.html" class="header__link" id="resultBtn">PvP</a>
+                </li>
+                <li class="header__item difficulty">
+                    <div class="difficulty__dropdown">
+                        <button class="difficulty__dropdown-btn" id="dropdownBtn">Hard</button>
+                        <div class="difficulty__dropdown-content" id="dropdownContent">
+                            <p id="hardMode">Hard</p>
+                            <p id="easyMode">Easy</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="header__item" id="contactBtn">
+                    <a href="#" class="header__link">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="result">
+        <h1 class="result__title">Statistics</h1>
+        <a class="contact__cross cross" id="closeResBtn"></a>
+        <div class="result__stat">
+            <div class="result__scale"></div>
+            <ul class="result__list">
+                <li class="result__item itemCross">Cross: 0</li>
+                <li class="result__item itemDraw">Draw: 0</li>
+                <li class="result__item itemZero">O,s: 0</li>
+            </ul>
+        </div>
+        <div class="result__buttons">
+            <button class="result__new-game button" id="buttonNew">New Game</button>
+            <button class="result__statistics button" id="contactResBtn">Contact</button>
+        </div>
+    </section>
+    
+    <section class="difficulty">
+
+    </section>
+
+    <section class="contact">
+        <h1 class="contact__title">Contact</h1>
+        <a class="contact__cross cross" id="closeCtnBtn"></a>
+        <ul class="contact__list">
+            <li class="contact__item">
+                <h2 class="contact__item-title"><a href="https://t.me/Sklyerrr">Telegram</a></h2>
+                <img src="img/icons/Tg.svg"
+                alt="Telegram" 
+                class="contact__item-img visible-mobile"
+                width="48" height="48" loading="lazy">
+                <a href="https://t.me/Sklyerrr" class="hidden-mobile" target="_blank"><img src="img/qr/Telegram.svg"
+                    class="contact__qr-img"
+                    width="180" height="180"
+                    border="0" title="Telegram">
+                </a>
+            </li>
+            <li class="contact__item">
+                <h2 class="contact__item-title"><a href="https://vk.ru/s.sklyarov98">Vkontakte</a></h2>
+                <img src="img/icons/VK.svg"
+                alt="VK" 
+                class="contact__item-img visible-mobile"
+                width="48" height="48" loading="lazy">
+                <a href="https://vk.ru/s.sklyarov98" class="hidden-mobile" target="_blank"><img src="img/qr/vk.svg"
+                    class="contact__qr-img"
+                    width="180" height="180"
+                    border="0" title="VK">
+                </a>
+            </li>
+            <li class="contact__item">
+                <h2 class="contact__item-title"><a href="https://github.com/Sklyerr">GitHub</a></h2>
+                <img src="img/icons/GitHub.svg"
+                alt="GitHub" 
+                class="contact__item-img visible-mobile"
+                width="48" height="48" loading="lazy">
+                <a href="https://github.com/Sklyerr" class="hidden-mobile" target="_blank"><img src="img/qr/git.svg"
+                    class="contact__qr-img"
+                    width="180" height="180"
+                    border="0" title="git">
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="board container">
+        <div class="board__box"><div class="board__empty" id="0"></div></div>
+        <div class="board__box"><div class="board__empty" id="1"></div></div>
+        <div class="board__box"><div class="board__empty" id="2"></div></div>
+        <div class="board__box"><div class="board__empty" id="3"></div></div>
+        <div class="board__box"><div class="board__empty" id="4"></div></div>
+        <div class="board__box"><div class="board__empty" id="5"></div></div>
+        <div class="board__box"><div class="board__empty" id="6"></div></div>
+        <div class="board__box"><div class="board__empty" id="7"></div></div>
+        <div class="board__box"><div class="board__empty" id="8"></div></div>
+    </section>
+</body>
+</html>
